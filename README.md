@@ -1,1 +1,1 @@
-<a href="https://github.com/Fossa88/gamedev2022/publicNew/index.html">Index</a>
+<a href="https://fossa88.github.io/gamedev2022/public/index.html">Index</a>
