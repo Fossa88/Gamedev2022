@@ -1,0 +1,529 @@
+<html>
+<body style='background-color: plum'>
+	<style>
+		table {
+		  width: 75%;
+		  height: 95%;
+		  border: 2px solid;
+		}
+		
+		</style>
+        <input type="button" value="Rules of the game" onclick="{
+             alert('If you click on a square in the grid it will change colour and the surrounding ones aswel. Your goal is to get all the squares to be red. Good Luck :D')
+             }">
+	<table align=center border=2>
+		<tr> <td id="b1t1" style="background-color: whitesmoke" onclick="{
+			Cell11()
+			Cell12()
+            Cell21()
+		}">
+		</td>
+					<td id="b2t1" value="1" style="background-color: whitesmoke" onclick="{
+                        Cell11()
+                        Cell12()
+                        Cell13()
+                        Cell22()
+					}">				
+					</td> 
+							<td id="b3t1" value="1" style="background-color: whitesmoke" onclick="{
+                                Cell12()
+                                Cell13()
+                                Cell14()
+                                Cell23()
+                            }">
+							</td>
+												<td id="b4t1" value="1" style="background-color: whitesmoke" onclick="{
+                                                   Cell24()
+                                                   Cell15()
+                                                   Cell13()
+                                                   Cell14()
+                                                }">
+												</td>
+															<td id="b5t1" value="1" style="background-color: whitesmoke" onclick="{
+
+                                                                Cell15()
+                                                                Cell14()
+                                                                Cell25()
+                                                            }">
+															</td> </tr>
+		<tr> <td id="b1t2" value="1" style="background-color: whitesmoke" onclick="{
+            Cell11()
+            Cell21()
+            Cell31()
+            Cell22()
+        }">
+        </td>
+						<td id="b2t2"value="1" style="background-color: whitesmoke" onclick="{
+                            Cell12()
+                            Cell21()
+                            Cell22()
+                            Cell23()
+                            Cell32()
+                        }">
+                        </td>
+									<td id="b3t2" value="1" style="background-color: whitesmoke" onclick="{
+                                        Cell22()
+                                        Cell23()
+                                        Cell24()
+                                        Cell13()
+                                        Cell33()
+                                    }">
+                                    </td>
+												<td id="b4t2"value="1" style="background-color: whitesmoke" onclick="{
+                                                    Cell24()
+                                                    Cell25()
+                                                    Cell23()
+                                                    Cell14()
+                                                    Cell34()
+                                                }">
+                                                </td>
+															<td id="b5t2"value="1" style="background-color: whitesmoke" onclick="{
+                                                                Cell25()
+                                                                Cell24()
+                                                                Cell15()
+                                                                Cell35()
+                                                            }">
+                                                            </td> </tr>
+		<tr> <td id="b1t3"value="1" style="background-color: whitesmoke" onclick="{
+            Cell31()
+            Cell21()
+            Cell41()
+            Cell32()
+        }">
+        </td>
+						<td id="b2t3"value="1" style="background-color: whitesmoke" onclick="{
+                            Cell32()
+                            Cell31()
+                            Cell33()
+                            Cell22()
+                            Cell42()
+                        }">
+                        </td>
+									<td id="b3t3"value="1" style="background-color: whitesmoke" onclick="{
+                                        Cell33()
+                                        Cell32()
+                                        Cell34()
+                                        Cell23()
+                                        Cell43()
+                                    }">
+                                    </td>
+												<td id="b4t3"value="1" style="background-color: whitesmoke" onclick="{
+                                                    Cell34()
+                                                    Cell33()
+                                                    Cell35()
+                                                    Cell24()
+                                                    Cell44()
+                                                }">
+                                                </td>
+															<td id="b5t3"value="1" style="background-color: whitesmoke" onclick="{
+                                                                Cell35()
+                                                                Cell25()
+                                                                Cell34()
+                                                                Cell45()
+                                                            }">
+                                                            </td> </tr>
+		<tr> <td id="b1t4" value="1" style="background-color: whitesmoke" onclick="{
+            Cell41()
+            Cell42()
+            Cell31()
+            Cell51()
+        }">
+        </td>
+						<td id="b2t4" value="1" style="background-color: whitesmoke" onclick="{
+                            Cell42()
+                            Cell41()
+                            Cell43()
+                            Cell32()
+                            Cell52()
+                        }">
+                        </td>
+									<td id="b3t4" value="1" style="background-color: whitesmoke" onclick="{
+                                        Cell43()
+                                        Cell42()
+                                        Cell44()
+                                        Cell53()
+                                        Cell33()
+                                    }">
+                                    </td>
+												<td id="b4t4" value="1" style="background-color: whitesmoke" onclick="{
+                                                    Cell44()
+                                                    Cell45()
+                                                    Cell43()
+                                                    Cell34()
+                                                    Cell54()
+                                                }">
+                                                </td>
+															<td id="b5t4" value="1" style="background-color: whitesmoke" onclick="{
+                                                                Cell45()
+                                                                Cell44()
+                                                                Cell55()
+                                                                Cell35()
+                                                            }">
+                                                            </td> </tr>
+		<tr> <td id="b1t5" value="1" style="background-color: whitesmoke" onclick="{
+            Cell51()
+            Cell52()
+            Cell41()
+        }">
+        </td>
+						<td id="b2t5" value="1" style="background-color: whitesmoke" onclick="{
+                            Cell52()
+                            Cell51()
+                            Cell53()
+                            Cell42()
+                        }">
+                        </td>
+									<td id="b3t5" value="1" style="background-color: whitesmoke" onclick="{
+                                        Cell53()
+                                        Cell54()
+                                        Cell52()
+                                        Cell43()
+                                    }">
+                                    </td>
+												<td id="b4t5" value="1" style="background-color: whitesmoke" onclick="{
+                                                    Cell54()
+                                                    Cell55()
+                                                    Cell53()
+                                                    Cell44()
+                                                }">
+                                                </td>
+															<td id="b5t5" value="1" style="background-color: whitesmoke" onclick="{
+                                                                Cell55()
+                                                                Cell54()
+                                                                Cell45()
+                                                            }">
+                                                            </td> </tr>
+	</table>
+	<script >
+
+        // Timer check thingy
+        var intervalId = window.setInterval(function(){
+            total = Cube11 + Cube12 + Cube13 + Cube14 + Cube15 + Cube21 + Cube22 + Cube23 + Cube24 + Cube25 + Cube31 + Cube32 + Cube33 + Cube34 + Cube35 + Cube41 + Cube42 + Cube43 + Cube44 + Cube45 + Cube51 + Cube52 + Cube53 + Cube54 + Cube55
+            Wincon()
+        }, 200);
+
+		//	Cube ids and values
+		let Cube11 = 1
+		let Cube12 = 1
+		let Cube13 = 1
+		let Cube14 = 1
+		let Cube15 = 1
+		let Cube21 = 1
+		let Cube22 = 1
+		let Cube23 = 1
+		let Cube24 = 1
+		let Cube25 = 1
+		let Cube31 = 1
+		let Cube32 = 1
+		let Cube33 = 1
+		let Cube34 = 1
+		let Cube35 = 1
+		let Cube41 = 1
+		let Cube42 = 1
+		let Cube43 = 1
+		let Cube44 = 1
+		let Cube45 = 1
+		let Cube51 = 1
+		let Cube52 = 1
+		let Cube53 = 1
+		let Cube54 = 1
+		let Cube55 = 1
+
+		//	Functions for each coloum
+		function Cell11() {
+			if (Cube11 == 1) {
+				document.getElementById('b1t1').style.backgroundColor = 'red'
+				Cube11 = 2
+			} else {
+				document.getElementById('b1t1').style.backgroundColor = 'whitesmoke'
+				Cube11 = 1
+			}
+		}
+
+        function Cell11A() {
+			document.getElementById('b1t1').style.backgroundColor = 'blue'
+			}
+
+		function Cell12() {
+			if (Cube12 == 1) {
+				document.getElementById('b2t1').style.backgroundColor = 'red'
+				Cube12 = 2
+			} else {
+				document.getElementById('b2t1').style.backgroundColor = 'whitesmoke'
+				Cube12 = 1
+			}
+		}
+
+		function Cell13() {
+			if (Cube13 == 1) {
+				document.getElementById('b3t1').style.backgroundColor = 'red'
+				Cube13 = 2
+			} else {
+				document.getElementById('b3t1').style.backgroundColor = 'whitesmoke'
+				Cube13 = 1
+			}
+		}
+
+		function Cell14() {
+			if (Cube14 == 1) {
+				document.getElementById('b4t1').style.backgroundColor = 'red'
+				Cube14 = 2
+			} else {
+				document.getElementById('b4t1').style.backgroundColor = 'whitesmoke'
+				Cube14 = 1
+			}
+		}
+
+		function Cell15() {
+			if (Cube15 == 1) {
+				document.getElementById('b5t1').style.backgroundColor = 'red'
+				Cube15 = 2
+			} else {
+				document.getElementById('b5t1').style.backgroundColor = 'whitesmoke'
+				Cube15 = 1
+			}
+		}
+
+		function Cell21() {
+			if (Cube21 == 1) {
+				document.getElementById('b1t2').style.backgroundColor = 'red'
+				Cube21 = 2
+			} else {
+				document.getElementById('b1t2').style.backgroundColor = 'whitesmoke'
+				Cube21 = 1
+			}
+		}
+
+		function Cell22() {
+			if (Cube22 == 1) {
+				document.getElementById('b2t2').style.backgroundColor = 'red'
+				Cube22 = 2
+			} else {
+				document.getElementById('b2t2').style.backgroundColor = 'whitesmoke'
+				Cube22 = 1
+			}
+		}
+
+		function Cell23() {
+			if (Cube23 == 1) {
+				document.getElementById('b3t2').style.backgroundColor = 'red'
+				Cube23 = 2
+			} else {
+				document.getElementById('b3t2').style.backgroundColor = 'whitesmoke'
+				Cube23 = 1
+			}
+		}
+
+		function Cell24() {
+			if (Cube24 == 1) {
+				document.getElementById('b4t2').style.backgroundColor = 'red'
+				Cube24 = 2
+			} else {
+				document.getElementById('b4t2').style.backgroundColor = 'whitesmoke'
+				Cube24 = 1
+			}
+		}
+
+		function Cell25() {
+			if (Cube25 == 1) {
+				document.getElementById('b5t2').style.backgroundColor = 'red'
+				Cube25 = 2
+			} else {
+				document.getElementById('b5t2').style.backgroundColor = 'whitesmoke'
+				Cube25 = 1
+			}
+		}
+
+		function Cell31() {
+			if (Cube31 == 1) {
+				document.getElementById('b1t3').style.backgroundColor = 'red'
+				Cube31 = 2
+			} else {
+				document.getElementById('b1t3').style.backgroundColor = 'whitesmoke'
+				Cube31 = 1
+			}
+		}
+
+		function Cell32() {
+			if (Cube32 == 1) {
+				document.getElementById('b2t3').style.backgroundColor = 'red'
+				Cube32 = 2
+			} else {
+				document.getElementById('b2t3').style.backgroundColor = 'whitesmoke'
+				Cube32 = 1
+			}
+		}
+
+		function Cell33() {
+			if (Cube33 == 1) {
+				document.getElementById('b3t3').style.backgroundColor = 'red'
+				Cube33 = 2
+			} else {
+				document.getElementById('b3t3').style.backgroundColor = 'whitesmoke'
+				Cube33 = 1
+			}
+		}
+
+		function Cell34() {
+			if (Cube34 == 1) {
+				document.getElementById('b4t3').style.backgroundColor = 'red'
+				Cube34 = 2
+			} else {
+				document.getElementById('b4t3').style.backgroundColor = 'whitesmoke'
+				Cube34 = 1
+			}
+		}
+
+		function Cell35() {
+			if (Cube35 == 1) {
+				document.getElementById('b5t3').style.backgroundColor = 'red'
+				Cube35 = 2
+			} else {
+				document.getElementById('b5t3').style.backgroundColor = 'whitesmoke'
+				Cube35 = 1
+			}
+		}
+
+		function Cell41() {
+			if (Cube41 == 1) {
+				document.getElementById('b1t4').style.backgroundColor = 'red'
+				Cube41 = 2
+			} else {
+				document.getElementById('b1t4').style.backgroundColor = 'whitesmoke'
+				Cube41 = 1
+			}
+		}
+
+		function Cell42() {
+			if (Cube42 == 1) {
+				document.getElementById('b2t4').style.backgroundColor = 'red'
+				Cube42 = 2
+			} else {
+				document.getElementById('b2t4').style.backgroundColor = 'whitesmoke'
+				Cube42 = 1
+			}
+		}
+
+		function Cell43() {
+			if (Cube43 == 1) {
+				document.getElementById('b3t4').style.backgroundColor = 'red'
+				Cube43 = 2
+			} else {
+				document.getElementById('b3t4').style.backgroundColor = 'whitesmoke'
+				Cube43 = 1
+			}
+		}
+
+		function Cell44() {
+			if (Cube44 == 1) {
+				document.getElementById('b4t4').style.backgroundColor = 'red'
+				Cube44 = 2
+			} else {
+				document.getElementById('b4t4').style.backgroundColor = 'whitesmoke'
+				Cube44 = 1
+			}
+		}
+
+		function Cell45() {
+			if (Cube45 == 1) {
+				document.getElementById('b5t4').style.backgroundColor = 'red'
+				Cube45 = 2
+			} else {
+				document.getElementById('b5t4').style.backgroundColor = 'whitesmoke'
+				Cube45 = 1
+			}
+		}
+
+		function Cell51() {
+			if (Cube51 == 1) {
+				document.getElementById('b1t5').style.backgroundColor = 'red'
+				Cube51 = 2
+			} else {
+				document.getElementById('b1t5').style.backgroundColor = 'whitesmoke'
+				Cube51 = 1
+			}
+		}
+
+		function Cell52() {
+			if (Cube52 == 1) {
+				document.getElementById('b2t5').style.backgroundColor = 'red'
+				Cube52 = 2
+			} else {
+				document.getElementById('b2t5').style.backgroundColor = 'whitesmoke'
+				Cube52 = 1
+			}
+		}
+
+		function Cell53() {
+			if (Cube53 == 1) {
+				document.getElementById('b3t5').style.backgroundColor = 'red'
+				Cube53 = 2
+			} else {
+				document.getElementById('b3t5').style.backgroundColor = 'whitesmoke'
+				Cube53 = 1
+			}
+		}
+
+		function Cell54() {
+			if (Cube54 == 1) {
+				document.getElementById('b4t5').style.backgroundColor = 'red'
+				Cube54 = 2
+			} else {
+				document.getElementById('b4t5').style.backgroundColor = 'whitesmoke'
+				Cube54 = 1
+			}
+		}
+
+		function Cell55() {
+			if (Cube55 == 1) {
+				document.getElementById('b5t5').style.backgroundColor = 'red'
+				Cube55 = 2
+			} else {
+				document.getElementById('b5t5').style.backgroundColor = 'whitesmoke'
+				Cube55 = 1
+			}
+        }
+
+        // Win condition stuff
+
+        function Wincon() {
+            if (total >= 50) {
+                total = 50
+                document.getElementById('b1t1').style.backgroundColor = 'blue'
+                document.getElementById('b1t2').style.backgroundColor = 'blue'
+                document.getElementById('b1t3').style.backgroundColor = 'blue'
+                document.getElementById('b1t4').style.backgroundColor = 'blue'
+                document.getElementById('b1t5').style.backgroundColor = 'blue'
+                document.getElementById('b2t1').style.backgroundColor = 'blue'
+                document.getElementById('b2t2').style.backgroundColor = 'blue'
+                document.getElementById('b2t3').style.backgroundColor = 'blue'
+                document.getElementById('b2t4').style.backgroundColor = 'blue'
+                document.getElementById('b2t5').style.backgroundColor = 'blue'
+                document.getElementById('b3t1').style.backgroundColor = 'blue'
+                document.getElementById('b3t2').style.backgroundColor = 'blue'
+                document.getElementById('b3t3').style.backgroundColor = 'blue'
+                document.getElementById('b3t4').style.backgroundColor = 'blue'
+                document.getElementById('b3t5').style.backgroundColor = 'blue'
+                document.getElementById('b4t1').style.backgroundColor = 'blue'
+                document.getElementById('b4t2').style.backgroundColor = 'blue'
+                document.getElementById('b4t3').style.backgroundColor = 'blue'
+                document.getElementById('b4t4').style.backgroundColor = 'blue'
+                document.getElementById('b4t5').style.backgroundColor = 'blue'
+                document.getElementById('b5t1').style.backgroundColor = 'blue'
+                document.getElementById('b5t2').style.backgroundColor = 'blue'
+                document.getElementById('b5t3').style.backgroundColor = 'blue'
+                document.getElementById('b5t4').style.backgroundColor = 'blue'
+                document.getElementById('b5t5').style.backgroundColor = 'blue'
+                
+                setTimeout(function(){
+                    alert("Nice");
+                    location.href = 'https://fossa88.github.io/gamedev2022/imgs%20for%20webpages/lightsoutcongrats.png'
+                },1000);
+                
+
+            }
+        }
+    
+        </script>
+        </body>
+        </html>
