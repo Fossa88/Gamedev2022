@@ -12,6 +12,10 @@
 			Autowin()
 			}">
 
+		<input type="button" value="Reset Grid" onclick="{
+			Reset()
+			}">
+
 		<ol align=left style="position: absolute;">	
 			<li>Clicking a cell will change the <br>colour
 				of it and the surrounding cells
@@ -496,7 +500,7 @@
 				Cube55 = 1
 			}
         }
-		// Auto win function
+		// Auto win function and reset function
 		function Autowin() {
 			setTimeout(function(){
 		Cube11 = 2
@@ -558,6 +562,60 @@
 		document.getElementById('b4t5').style.backgroundColor = 'red'  
 		document.getElementById('b5t5').style.backgroundColor = 'red'   
                 },5000);
+		}
+
+		function Reset() {
+		Cube11 = 1
+		Cube12 = 1
+		Cube13 = 1
+		Cube14 = 1
+		Cube15 = 1
+		Cube21 = 1
+		Cube22 = 1
+		Cube23 = 1
+		Cube24 = 1
+		Cube25 = 1
+		Cube31 = 1
+		Cube32 = 1
+		Cube33 = 1
+		Cube34 = 1
+		Cube35 = 1
+		Cube41 = 1
+		Cube42 = 1
+		Cube43 = 1
+		Cube44 = 1
+		Cube45 = 1
+		Cube51 = 1
+		Cube52 = 1
+		Cube53 = 1
+		Cube54 = 1
+		Cube55 = 1
+		document.getElementById('b1t1').style.backgroundColor = 'whitesmoke'    
+		document.getElementById('b2t1').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b3t1').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b4t1').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b5t1').style.backgroundColor = 'whitesmoke'
+		document.getElementById('b1t2').style.backgroundColor = 'whitesmoke'    
+		document.getElementById('b2t2').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b3t2').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b4t2').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b5t2').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b1t3').style.backgroundColor = 'whitesmoke'    
+		document.getElementById('b2t3').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b3t3').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b4t3').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b5t3').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b1t4').style.backgroundColor = 'whitesmoke'    
+		document.getElementById('b2t4').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b3t4').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b4t4').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b5t4').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b1t5').style.backgroundColor = 'whitesmoke'    
+		document.getElementById('b2t5').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b3t5').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b4t5').style.backgroundColor = 'whitesmoke'  
+		document.getElementById('b5t5').style.backgroundColor = 'whitesmoke'  
+	  
 		}
 
         // Win condition stuff
