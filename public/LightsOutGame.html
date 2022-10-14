@@ -2,15 +2,28 @@
 <body style='background-color: plum'>
 	<style>
 		table {
-		  width: 75%;
-		  height: 95%;
+		  width: 60%;
+		  height: 85%;
 		  border: 2px solid;
 		}
-		
 		</style>
-        <input type="button" value="Rules of the game" onclick="{
-             alert('If you click on a square in the grid it will change the colour of the cell and as well as the surrounding ones. Your goal is to get all the squares to be red. Good Luck :D')
-             }">
+
+		<input type="button" value="Auto Win for Noobs" onclick="{
+			Autowin()
+			}">
+
+		<ol align=left style="position: absolute;">	
+			<li>Clicking a cell will change the <br>colour
+				of it and the surrounding cells
+			</li>
+			<li>Your goal is to change all <br>
+				the cells to the colour red
+			</li>
+			<li>Good luck :D
+
+			</li>
+
+		</ol>
 	<table align=center border=2>
 		<tr> <td id="b1t1" style="background-color: whitesmoke" onclick="{
 			Cell11()
@@ -483,6 +496,69 @@
 				Cube55 = 1
 			}
         }
+		// Auto win function
+		function Autowin() {
+			setTimeout(function(){
+		Cube11 = 2
+		Cube12 = 2
+		Cube13 = 2
+		Cube14 = 2
+		Cube15 = 2  
+		document.getElementById('b1t1').style.backgroundColor = 'red'    
+		document.getElementById('b2t1').style.backgroundColor = 'red'  
+		document.getElementById('b3t1').style.backgroundColor = 'red'  
+		document.getElementById('b4t1').style.backgroundColor = 'red'  
+		document.getElementById('b5t1').style.backgroundColor = 'red'  
+                },1000);
+			setTimeout(function(){  
+		Cube21 = 2
+		Cube22 = 2
+		Cube23 = 2
+		Cube24 = 2
+		Cube25 = 2
+		document.getElementById('b1t2').style.backgroundColor = 'red'    
+		document.getElementById('b2t2').style.backgroundColor = 'red'  
+		document.getElementById('b3t2').style.backgroundColor = 'red'  
+		document.getElementById('b4t2').style.backgroundColor = 'red'  
+		document.getElementById('b5t2').style.backgroundColor = 'red' 
+                },2000);
+		setTimeout(function(){
+		Cube31 = 2
+		Cube32 = 2
+		Cube33 = 2
+		Cube34 = 2
+		Cube35 = 2  
+		document.getElementById('b1t3').style.backgroundColor = 'red'    
+		document.getElementById('b2t3').style.backgroundColor = 'red'  
+		document.getElementById('b3t3').style.backgroundColor = 'red'  
+		document.getElementById('b4t3').style.backgroundColor = 'red'  
+		document.getElementById('b5t3').style.backgroundColor = 'red'   
+                },3000);
+		setTimeout(function(){   
+		Cube41 = 2
+		Cube42 = 2
+		Cube43 = 2
+		Cube44 = 2
+		Cube45 = 2  
+		document.getElementById('b1t4').style.backgroundColor = 'red'    
+		document.getElementById('b2t4').style.backgroundColor = 'red'  
+		document.getElementById('b3t4').style.backgroundColor = 'red'  
+		document.getElementById('b4t4').style.backgroundColor = 'red'  
+		document.getElementById('b5t4').style.backgroundColor = 'red'
+                },4000);
+		setTimeout(function(){
+		Cube51 = 2
+		Cube52 = 2
+		Cube53 = 2
+		Cube54 = 2
+		Cube55 = 2  
+		document.getElementById('b1t5').style.backgroundColor = 'red'    
+		document.getElementById('b2t5').style.backgroundColor = 'red'  
+		document.getElementById('b3t5').style.backgroundColor = 'red'  
+		document.getElementById('b4t5').style.backgroundColor = 'red'  
+		document.getElementById('b5t5').style.backgroundColor = 'red'   
+                },5000);
+		}
 
         // Win condition stuff
 
