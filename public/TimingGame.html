@@ -1,0 +1,46 @@
+<html>
+<body style="background-color: magenta">
+<script>
+    // Variables
+        let Start = 0
+        let value = 0
+        let Max = 0
+    // General Functions
+        function RNG(min, max) {
+   return Math.floor(Math.random() * (max - min + 1) ) + min;  
+    }
+
+    // Global Timer
+    var Globaltimer = window.setInterval(function(){
+        let RNG1 = RNG(1 , 10)
+        document.getElementById('Div1').innerHTML = RNG1
+        }, 500);
+</script>
+
+<button onclick="{
+    if(Start = 0) {
+        Start = 1
+        Max = 10
+    } else {
+        Start = 0
+        Max = 0
+    }
+
+
+for(let loop = 0; loop > Max;  ){
+		if (loop = Start){
+        value + 1
+        setTimeout(function () {
+        document.getElementById('num').innerHTML = value
+  }, 3000);
+        }
+        }
+        console.log(value)
+        console.log(Start)
+    }">
+    </button>
+<br>
+<div id="Div1">.</div>
+<div id="num">.</div>
+</body>
+</html>
