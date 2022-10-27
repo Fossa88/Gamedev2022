@@ -1,0 +1,53 @@
+<html>
+    <body style="background-color: rgb(57, 81, 174)">
+        <style>
+            textarea {
+                width: 75px;
+                height: 20;
+            }
+        </style>
+        <h1><b>Basic Algebros Calculator</b></h1>
+        Example (3x+7 = 22) <br>
+        Only 1 variable works at this time <br>
+        Variable must be X<br>
+        <input type="button" value="Console Log Button" onclick="{
+            CL()
+            }">
+        <br><br>
+
+    <input id="Text1" value="3x" type="textarea">
+    +
+    <input id="Text2" value="7" type="textarea">
+    =
+    <input id="Text3" value="22" type="textarea">
+            <br><br>
+
+    <input type="button" value="Solve for X" onclick="{
+            Solve()
+            document.getElementById('Result').innerHTML = X
+    }">  
+
+    <br><br>
+
+    <div id="Result">X = </div>
+    <script>
+        // Console Log Function
+        function CL() {
+            console.log(Text3)
+            console.log(Text2)
+            console.log(Text1)
+            console.log()
+        }
+        // Variables
+        let X = 0
+        let Answer = 0
+        document.getElementById('Text1').value = Num1
+        document.getElementById('Text2').value = Num2
+        document.getElementById('Text3').value = Num3
+        //Functions
+        function Solve() {
+
+        }
+    </script>
+    </body>
+</html>
