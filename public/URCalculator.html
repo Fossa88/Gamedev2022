@@ -6,66 +6,34 @@
             }">
 <div id="Div1">.</div>
 
-<h3><b>Type what key you want to use</b></h3>
-
-<textarea id="txt" maxlength="1" placeholder="I.E. A"></textarea>
-<textarea id="txt2" maxlength="1" placeholder="I.E. A"></textarea>
+<h3><b>Use A and S</b></h3>
 
 <script>
     // Variables
-    var URTime = 0
-    var URNum = 0
-    var URVar = document.getElementById("txt").value;
-    var URVar2 = document.getElementById("txt").value;
-    // Functions
-
+    let URNum = 0
+    // functions
     function URTimer() {
-        setInterval(function() {
+        setInterval(() => {
             URNum + 1
-        }, 100)
-    };
-
-var keyEnum = { URVarKey:0, URVarKey2:1};
-var keyArray = new Array(4);
-
-function onKeyDown()
-{
-    // Detect which key was pressed
-    if( key == URVar )
-        keyArray[keyEnum.URVarKey] = true;
-
-    if( key == URVar2 )
-        keyArray[keyEnum.URVarKey2] = true;
-    // Repeat for each key
-}
-function onKeyUp()
-{
-    // Detect which key was released
-    if( key == URVar )
-        keyArray[keyEnum.URVarKey] = false;
-
-    if( key == URVar2 )
-        keyArray[keyEnum.URVarKey2] = false;
-    // Repeat for each key
-}
-
-
-function isKeyDown(key)
-{
-    return keyArray[key];
-}
+            document.getElementById('Div2').innerHTML = URNum
+        }, 100);
+    }
 </script>
+<body onKeyDown="{
 
-<div id="URDiv2">.</div>
-<button onclick="{
-    var URVar = document.getElementById('txt').value
-    var URVar2 = document.getElementById('txt2').value
-    console.log(URTime)
-    console.log(URVar)
-    console.log(URVar2)
-    console.log(URNum)
-    console.log(URVarKey)
-    console.log(URVarKey2)
-    }"></button>
+    let myKey = event.key
+//  let myKey = String.toLowerCase(event.key)
+
+  if (myKey === 'a') {
+    URTimer()
+    URNum + 1
+    document.getElementById('Div1').innerHTML = '2'
+  }
+  if (myKey === 's') {
+    document.getElementById('Div1').innerHTML = '3'
+  }
+}">
+</body>
+<div id="Div2"></div>
     </body>
 </html>
