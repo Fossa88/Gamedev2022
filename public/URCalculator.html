@@ -9,14 +9,29 @@
 <h3><b>Use A and S</b></h3>
 
 <script>
+    // Global Timer
+    var intervalId = window.setInterval(function(){
+        Consolelogs()
+        document.getElementById('Div2').innerHTML = URNum
+        }, 1000);
+    // Console Logs
+    function Consolelogs() {
+        console.log(URNum)
+        console.log(URMath)
+        console.log(urStore)
+    }
     // Variables
     let URNum = 0
+    let URMath = 0
     // functions
+    function Math() {
+        urStore = URMath
+        
+    }
     function URTimer() {
         setInterval(() => {
-            URNum + 1
-            document.getElementById('Div2').innerHTML = URNum
-        }, 100);
+            URMath = URMath + 1
+        }, 1);
     }
 </script>
 <body onKeyDown="{
@@ -25,15 +40,24 @@
 //  let myKey = String.toLowerCase(event.key)
 
   if (myKey === 'a') {
+    Math()
+    URMath = 0
+    URNum = URNum + 1
     URTimer()
-    URNum + 1
-    document.getElementById('Div1').innerHTML = '2'
+
   }
+
   if (myKey === 's') {
-    document.getElementById('Div1').innerHTML = '3'
-  }
+    Math()
+    URMath = 0
+    URNum = URNum + 1
+    URTimer()
+  
+
+   }
 }">
 </body>
 <div id="Div2"></div>
+
     </body>
 </html>
