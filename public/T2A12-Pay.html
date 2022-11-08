@@ -1,0 +1,44 @@
+<html>
+    <body style="background-color: rgba(102, 51, 153)">
+        <h2 align="center">T2a12 Pay</h2>
+<br><br>
+        <input type="button" value="Math Specifics" onclick="{
+        document.getElementById('info').innerHTML = 'Assumes Weekly is 5 days a week worked<br>Assumes Monthly is 20 days a month worked<br>Assumes Yearly is 240 days a year worked'    
+            }">
+            <div id="info"></div><br>
+            
+        Pay <input type="textarea" value="10" id="myPay"><br>
+        Hours <input type="textarea" value="10" id="myHours"><br>
+        Tax% <input type="textarea" value="30" id="myTax"><br>
+
+        <input type="button" value="Calculate" onclick="{
+            Calculate()
+            }"></button>
+
+
+<h3>Take Home</h3>
+<table border="2">
+    <tr><td></td><td>Daily</td><td>Weekly</td><td>Monthly</td><td>Yearly</td></tr>
+    <tr><td>Salary</td><td><div id="Div01">Nan</div></td><td><div id="Div03">Nan</div></td><td><div id="Div05">Nan</div></td><td><div id="Div07">Nan</div></td></tr>
+    <tr><td>Salary<br>with Tax</td><td><div id="Div02">Nan</div></td><td><div id="Div04">Nan</div></td><td><div id="Div06">Nan</div></td><td><div id="Div08">Nan</div></td></tr>
+</table>
+<script>
+function Calculate() {
+    let Pay = document.getElementById('myPay').value
+    let Hours = document.getElementById('myHours').value
+    let Tax = document.getElementById('myTax').value
+    document.getElementById('Div01').innerHTML = Pay*Hours
+    let combinded = Pay*Hours
+    let PercNum = Tax/100
+    let Bruh = PercNum*combinded
+    let final = combinded-Bruh
+    document.getElementById('Div02').innerHTML = final
+    document.getElementById('Div03').innerHTML = combinded*5
+    document.getElementById('Div04').innerHTML = final*5
+    document.getElementById('Div05').innerHTML = combinded*20
+    document.getElementById('Div06').innerHTML = final*20
+    document.getElementById('Div07').innerHTML = combinded*240
+    document.getElementById('Div08').innerHTML = final*240
+}
+</script>
+</html>
