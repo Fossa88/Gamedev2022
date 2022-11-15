@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <body style="background-color: rgba(67, 139, 195, 0.537)">
     <h1 align="center">Unstable Rate Calculator</h1>
@@ -6,32 +7,36 @@
             }">
 <div id="Div1">.</div>
 
+Max clicks<input type="textarea" value="20" id="bruh"><br>
 <h3><b>Use A and S</b></h3>
 
 <script>
     // Global Timer
     var intervalId = window.setInterval(function(){
-        Consolelogs()
-        document.getElementById('Div2').innerHTML = URNum
-        }, 1000);
+        document.getElementById('Div2').innerHTML = URClicks
+        URMath = URMath + 1
+        }, 100);
     // Console Logs
     function Consolelogs() {
-        console.log(URNum)
-        console.log(URMath)
-        console.log(urStore)
+        console.log(URClicks, 'URClicks')
+        console.log(URMath, 'URMath')
+        console.log(urStore, 'urStore')
+        console.log(CPSCheck1, 'CPSCheck')
     }
     // Variables
-    let URNum = 0
+    let CPSCheck1 = document.getElementById('bruh').value   
     let URMath = 0
+    let URClicks = 0
     // functions
     function Math() {
         urStore = URMath
-        
     }
-    function URTimer() {
-        setInterval(() => {
-            URMath = URMath + 1
-        }, 1);
+
+    function CPSCheck() {
+        if (URClicks = CPSCheck1) {
+            URClicks = 0
+            URMath = 0
+        }
     }
 </script>
 <body onKeyDown="{
@@ -42,17 +47,18 @@
   if (myKey === 'a') {
     Math()
     URMath = 0
-    URNum = URNum + 1
-    URTimer()
+    URClicks = URClicks + 1
+    Consolelogs()
+    CPSCheck()
 
   }
 
   if (myKey === 's') {
     Math()
+    URClicks = URClicks + 1
     URMath = 0
-    URNum = URNum + 1
-    URTimer()
-  
+    Consolelogs()
+    CPSCheck() 
 
    }
 }">
