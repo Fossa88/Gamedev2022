@@ -7,15 +7,19 @@
             }">
 <div id="Div1">.</div>
 
-Max clicks<input type="textarea" value="20" id="bruh"><br>
+Max clicks <input type="textarea" value="20" id="bruh"><br>
 <h3><b>Use A and S</b></h3>
 
 <script>
     // Global Timer
     var intervalId = window.setInterval(function(){
         document.getElementById('Div2').innerHTML = URClicks
+        document.getElementById('Div3').innerHTML = urStore
+        CPSCheck1 = document.getElementById('bruh').value
         URMath = URMath + 1
-        }, 100);
+        TotalTime = TotalTime + 1
+        Reset()
+        }, 1);
     // Console Logs
     function Consolelogs() {
         console.log(URClicks, 'URClicks')
@@ -23,19 +27,35 @@ Max clicks<input type="textarea" value="20" id="bruh"><br>
         console.log(urStore, 'urStore')
         console.log(CPSCheck1, 'CPSCheck')
     }
-    // Variables
-    let CPSCheck1 = document.getElementById('bruh').value   
+    // Variables   
     let URMath = 0
     let URClicks = 0
+    let TotalTime = 0
+    let urStore = 0
+    
     // functions
+    function CPS() {
+        CPSTimer = TotalTime/50
+        CPS1 = URClicks/CPSTimer
+        document.getElementById('Div4').innerHTML = CPS1
+    }
+
+    function Reset () {
+        if (URClicks == 0) {
+            URMath = 0
+        }
+    }
+
     function Math() {
         urStore = URMath
     }
 
     function CPSCheck() {
-        if (URClicks = CPSCheck1) {
+        if (URClicks == CPSCheck1) {
             URClicks = 0
             URMath = 0
+            urStore = 0
+            TotalTime = 0
         }
     }
 </script>
@@ -50,7 +70,7 @@ Max clicks<input type="textarea" value="20" id="bruh"><br>
     URClicks = URClicks + 1
     Consolelogs()
     CPSCheck()
-
+    CPS()
   }
 
   if (myKey === 's') {
@@ -59,11 +79,13 @@ Max clicks<input type="textarea" value="20" id="bruh"><br>
     URMath = 0
     Consolelogs()
     CPSCheck() 
-
+    CPS()
    }
 }">
 </body>
 <div id="Div2"></div>
+Ms taken <div id="Div3"></div>
+Current CPS <div id="Div4"></div>
 
     </body>
 </html>
