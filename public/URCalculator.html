@@ -21,26 +21,29 @@ Max clicks <input type="textarea" value="30 " id="bruh"><br>
         TotalTime = TotalTime + 1
         }
         Reset()
-        }, 100);
+        }, 10);
     // Console Logs
     function Consolelogs() {
         console.log(URClicks, 'URClicks')
-        console.log(URMath, 'URMath')
         console.log(urStore, 'urStore')
         console.log(CPSCheck1, 'CPSCheck')
-        console.log(TotalTime, 'TotalTime')
     }
     // Variables   
     let URMath = 0
     let URClicks = 0
     let TotalTime = 0
     let urStore = 0
+    let BPM = 0
     
     // functions
     function CPS() {
-        CPSTimer = TotalTime/10
+        CPSTimer = TotalTime/100
         CPS1 = URClicks/CPSTimer
-        document.getElementById('Div4').innerHTML = CPS1
+        BPM = CPS1*60/4
+        const BPM1 = BPM.toFixed(0)
+        document.getElementById('Div6').innerHTML = BPM1
+        const CPS2 = CPS1.toFixed(1)
+        document.getElementById('Div4').innerHTML = CPS2
     }
 
     function Reset () {
@@ -51,6 +54,7 @@ Max clicks <input type="textarea" value="30 " id="bruh"><br>
 
     function Math() {
         urStore = URMath
+
     }
 
     function CPSCheck() {
@@ -61,7 +65,7 @@ Max clicks <input type="textarea" value="30 " id="bruh"><br>
             TotalTime = 0
         }
     }
-</script>
+    </script>
 <body onKeyDown="{
 
     let myKey = event.key
@@ -90,6 +94,7 @@ Total Clicks <div id="Div2"></div>
 Ms taken <div id="Div3"></div>
 Unstable Rate <div id="Div5"></div>
 Current CPS <div id="Div4"></div>
+Current BPM <div id="Div6"></div>
 
     </body>
 </html>
