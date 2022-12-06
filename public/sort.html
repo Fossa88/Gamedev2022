@@ -1,0 +1,68 @@
+<html>
+    <body style="background-color: pink">
+    <h2 align="center">Sort</h2>
+
+    Number of Sorts <input type="textarea" value="30" id="Numberbruh"><br>
+
+    <input type="button" value="Randomize and Sort" onclick="{
+        myMax = document.getElementById('Numberbruh').value
+        Randomize()
+        myShow()
+        Count()
+        setInterval(() => {
+            Show()
+            myShow()
+        }, 3000);
+        clearInterval
+    }">
+    <div id="Div2">.</div>
+
+    <script>
+                let myMax = document.getElementById('Numberbruh').value
+        let myCards = new Array(myMax)  
+     
+        function Count() {
+            Counter = 3
+            document.getElementById('Div2').innerHTML = Counter + ' seconds till sort'
+        var Timer = setInterval(() => {
+            Counter = Counter - 1
+            document.getElementById('Div2').innerHTML = Counter + ' seconds till sort'
+            if (Counter === 0){
+            clearInterval(Timer)
+            document.getElementById('Div2').innerHTML = 'Sorted!'
+            Counter = 3
+            }
+        }, 1000)   
+        }
+
+        function Randomize() {
+       for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+          myCards[myLoop] = Math.floor(Math.random()*myMax)
+       }
+     }
+     
+        function myShow() {
+       let myTemp = ''
+       for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+          myTemp += myLoop + ' = '+ myCards[myLoop] + '<br>'
+       }
+        document.getElementById('myDiv01').innerHTML = myTemp
+     }
+     
+        function Show() {
+     for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+       let myTemp01 = 0
+       for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+             if	(myCards[myLoop] >= myCards[myLoop+1]) {
+                 myTemp01 = myCards[myLoop]
+                 myCards[myLoop] = myCards[myLoop+1]
+                 myCards[myLoop+1] = myTemp01
+                 
+             } else {
+                 myTemp01 = myTemp01
+             }}}}
+     </script>
+     
+     <div id="myDiv01"></div>
+    </body>
+</html>
