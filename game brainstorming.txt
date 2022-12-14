@@ -1,0 +1,43 @@
+Towers
+1) Pistol Tower
+	Shoots at a medium pace, only 1 bullet is shot at a time.
+	(Hp = 30) (BulletSpeed = medium) (Range = Short-Mid) (ShotSpeed = Medium) (Damage = 8) (Cost = $10)
+2) Shotgun Tower
+	Shoots multiple bullets in random directions, shoots 3-5 bullets at a time
+	(Hp = 50) (BulletSpeed = Slow) (Range = Short) (ShotSpeed = Slow) (Damage = 10 per bullet) (Cost = $25)
+3) Cannon Tower
+	Shoots a large bullet that pierces through enemies doing large amounts of damage
+	(Hp = 50) (BulletSpeed = Fast-Medium) (Range = Far) (ShotSpeed = Very Slow) (Damage = 50) (Cost = $100)
+4) Assault Tower
+	Shoots very fast doing less damage as a result
+	(Hp = 20) (BulletSpeed = Fast-Medium) (Range = Far-Medium) (ShotSpeed = Very Fast) (Damage = 3) (Cost = $30)
+5) Laser Tower
+	Shoots a large laser all the way through the map piercing through all enemies
+	(Hp = 10) (BulletSpeed = Instant) (Range = Medium) (ShotSpeed = Slow) (Damage = 30) (Cost = $200)
+6) Sniper Tower
+	Has a very long range with a very fast bullet
+	(Hp = 25) (BulletSpeed = Fast) (Range = Very Far) (ShotSpeed = Medium) (Damage = 10) (Cost = $50)
+6) Walls 
+	A building that has high Hp, but can't kill enemies
+	(Hp = 100) (Cost = 20)
+7) Core
+	Can only place 1 of them which starts the game, once this tower dies the game is over
+	(Hp = 250) (Cost = Free)
+	
+
+Enemies
+1) Basic Goon
+	Just moves towards your base and does damage when it touches your towers
+	(Hp = 25) (MovementSpeed = medium) (Damage = 3) ($Earned = $2)
+2) Brute Goon
+	Similar to Basic Goon attack wise, but it does more damage and has more health
+	(Hp = 100) (MovementSpeed = Very Slow) (Damage = 20) ($Earned = $25)
+3) Wiggle Goon
+	Moves in a wiggle towards your base
+	(Hp = 10) (MovementSpeed = Fast) (Damage = 7) ($Earned = $5)
+4) Summoner Goon
+	Can spawn Basic Goons as he walks towards the base
+	(Hp = 50) (MovementSpeed = Slow) (Damage = 5) ($Earned = $20)
+5) Gunner Goon
+	Shoot bullets that deal damage to towers
+	(Hp = 20) (MovementSpeed = Medium) (DamageAttack = 5) (DamageBullet = 10) (ShotSpeed and BulletSpeed are medium) ($Earned = $15)
