@@ -22,7 +22,7 @@ var pad = 0
         context1.moveTo(pad, 0.5 + bruh + pad);
         context1.lineTo(bwidth + pad, 0.5 + bruh + pad);
     }
-    context1.strokeStyle = "rgb(0, 0, 0, 0.3";
+    context1.strokeStyle = "rgb(0, 0, 0, 0.3)";
     context1.stroke();
     // Enemies
     class lilgoon {
