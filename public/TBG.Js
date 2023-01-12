@@ -12,7 +12,8 @@ canvas.style.background = "#00000";
 var bwidth = ww
 var bheight = wh
 var pad = 0
-
+var TowerNum = 0
+var CoreCheck = 0
     for (var bruh = 0; bruh <= bwidth; bruh += 40) {
         context1.moveTo(0.5 + bruh + pad, pad);
         context.lineTo(0.5 + bruh + pad, bheight + pad);
@@ -24,6 +25,20 @@ var pad = 0
     }
     context1.strokeStyle = "rgb(0, 0, 0, 0.3)";
     context1.stroke();
+
+    // Basic stuff
+    canvas.addEventListener('click', (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const Xmousepos1 = event.clientX - rect.left;
+        const Ymousepos1 = event.clientY - rect.top;
+        let Xmousepos = Math.round(Xmousepos1, 40)
+        let Ymousepos = Math.round(Ymousepos1, 40)
+        console.log('X1: ' + Xmousepos1 + ' Y1: ' + Ymousepos1);
+        console.log('X2: ' + Xmousepos + ' Y2: ' + Ymousepos);
+        console.log(TowerNum);
+        ObjPlace();
+    });
+
     // Enemies
     class lilgoon {
         constructor(Xpos, Ypos, Radius) {
@@ -65,11 +80,25 @@ var pad = 0
             context.closePath();
         }
     }
+    class Wall {
+        constructor(Xpos, Ypos, Width, Height) {
+            this.Xpos = Xpos;
+            this.Ypos = Ypos;
+            this.Width = Width;
+            this.Height = Height;
+        }
+        draw(context) {
+            context.beginPath();
+            context.strokeStyle = "rgb(0, 0, 0, 1)"
+            context.linewidth = 2;
+            context.rect(this.Xpos, this.Ypos, this.Width, this.Height);
+            context.fillStyle = 'black';
+            context.fill();
+            context.stroke();
+            context.closePath();
+        }
+    }
 
-    // Core Towers
-    let myCore = new Core(281.7, 281.7, 78, 78);
-
-    myCore.draw(context);
 
 class PistolTower {
     constructor(Xpos, Ypos, Radius,) {
@@ -89,9 +118,38 @@ class PistolTower {
     }
 }
 
-    // Pistol Towers
-let myPistolTower = new PistolTower(100, 100, 20,);
-let myPistolTower2 = new PistolTower(200, 100, 20,);
+// Object place function
+function ObjPlace () {
+    if (TowerNum == 1) { 
+        if (CoreCheck == 0) {
+        CoreCheck = 1
+        const rect = canvas.getBoundingClientRect();
+        const Xmousepos1 = event.clientX - rect.left;
+        const Ymousepos1 = event.clientY - rect.top;
+        let Xmousepos = Math.round(Xmousepos1, 40)
+        let Ymousepos = Math.round(Ymousepos1, 40)
+        let myCore = new Core(Xmousepos, Ymousepos, 80, 80);
+        myCore.draw(context);
+        }
+    };
 
-myPistolTower.draw(context);
-myPistolTower2.draw(context);
+    if (TowerNum == 2) {
+        const rect = canvas.getBoundingClientRect();
+        const Xmousepos1 = event.clientX - rect.left;
+        const Ymousepos1 = event.clientY - rect.top;
+        let Xmousepos = Math.round(Xmousepos1, 40)
+        let Ymousepos = Math.round(Ymousepos1, 40)
+        let myWall = new Wall(Xmousepos, Ymousepos, 40, 40);
+        myWall.draw(context);
+    };
+
+    if (TowerNum == 3) {
+        const rect = canvas.getBoundingClientRect();
+        const Xmousepos1 = event.clientX - rect.left;
+        const Ymousepos1 = event.clientY - rect.top;
+        let Xmousepos = Math.round(Xmousepos1, 40)
+        let Ymousepos = Math.round(Ymousepos1, 40)
+        let myPistolTower = new PistolTower(Xmousepos, Ymousepos, 20);
+        myPistolTower.draw(context);
+    }
+}
