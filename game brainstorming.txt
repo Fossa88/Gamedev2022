@@ -41,3 +41,12 @@ Enemies
 5) Gunner Goon
 	Shoot bullets that deal damage to towers
 	(Hp = 20) (MovementSpeed = Medium) (DamageAttack = 5) (DamageBullet = 10) (ShotSpeed and BulletSpeed are medium) ($Earned = $15)
+	
+1) Make object placing system (done)
+2) Make enemies move towards Core
+3) Make Gun shoot projectiles
+4.5 can be done later) Make gun shoot projectiles at enemies
+4) add collison
+5) Add HP system
+6) Make walls
+7) Make a lose/win condition
