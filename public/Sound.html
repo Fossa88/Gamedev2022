@@ -1,9 +1,31 @@
 <body style="background-color: aquamarine">
     <script> let mySound1 = new Audio('Yeh.m4a') </script>
-        <h1 align="center">T3A12-Sounds-and-events-name.html</h1>
+        <h1 align="center">T2A10-Sounds-and-events</h1>
         <h3>Click for sound</h3>
 
     <input type="button" value="sound" onClick="{
         mySound1.play()
     }">
+
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+<script>
+    function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,de,ru', layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+
+    }
+</script>
+
+
+
+<h1 align="center">t2a10-Translate</h1>
+
+<div id="google_translate_element">Hi Mr Ellis, this can talk in 3 different languages</div>
+
+
+<input  type="button" value="initilize speak" onclick="{  
+   let myVoice = 'Russian Female'
+   responsiveVoice.speak(document.getElementById('google_translate_element').innerText, myVoice, {pitch: 1, rate: 1, volume : 1})                                              
+}"><br><br>
 </body>
