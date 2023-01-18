@@ -1,0 +1,64 @@
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
+
+    <style>
+        div {
+            color: white; 
+        }
+    </style>
+    
+    <script>
+       let myGlobalX = 0
+       let myClock
+
+       function XYupdate(){
+        Ypos1 = document.getElementById('myImage01').style.top
+        Xpos1= document.getElementById('myImage01').style.left
+        document.getElementById('Div').innerHTML = 'X: ' + Xpos1 + 'Y: ' + Ypos1
+        console.log(Ypos1, Xpos1)
+       }
+    </script>
+    
+    <input id="myButton01" type=button value="background move left" onclick="{
+      myTemp = '100px 0px'
+      myGlobalX -= 5
+      myTemp =  myGlobalX + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition =myTemp
+    
+    }">
+    
+    <input type=button value="Auto Background Left" onclick="{
+      clearInterval(myClock)
+      myClock = setInterval(function(){
+         document.getElementById('myButton01').click() 
+      }, 100)
+        
+    }">
+    <input type=button value="Image Right" onclick="{
+      document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+      XYupdate()
+      }">
+     <input type=button value="Image Left" onclick="{
+        document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 10 + 'px'
+        XYupdate()
+      }">
+       <input type=button value="Image Up" onclick="{
+        document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 10 + 'px'
+        XYupdate()
+      }">
+       <input type=button value="Image down" onclick="{
+        document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 10 + 'px'
+        XYupdate()
+      }"><br><br>
+  <input type="button" value="Click for Random position" onclick="{
+    let Xpos = Math.floor(Math. random() * 1820)
+    let Ypos = Math.floor(Math. random() * 800)
+    document.getElementById('myImage01').style.left = Xpos
+    document.getElementById('myImage01').style.top = Ypos
+    console.log(Xpos, Ypos)
+    XYupdate()
+    }"><br>
+
+    <div id="Div">.</div> 
+    
+    <img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="cover3.jpg">
+    
